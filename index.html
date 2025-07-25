@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Kartaal Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- ====== AUTH PAGES ====== -->
+    <div id="auth-page" class="page active">
+      <header class="app-header">
+        <h1>🎯 The Kartaal Challenge</h1>
+        <p class="app-subtitle">Build habits together, one day at a time</p>
+      </header>
+
+      <!-- Login Form -->
+      <section id="login-section" class="card auth-card">
+        <div class="card__body">
+          <h2>Login</h2>
+          <form id="login-form">
+            <div class="form-group">
+              <label for="login-username" class="form-label">Username</label>
+              <input id="login-username" type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="login-password" class="form-label">Password</label>
+              <input id="login-password" type="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full-width">Login</button>
+          </form>
+          <p class="mt-8">No account? <a href="#signup" id="to-signup-link">Sign up here</a></p>
+        </div>
+      </section>
+
+      <!-- Signup Form -->
+      <section id="signup-section" class="card auth-card hidden">
+        <div class="card__body">
+          <h2>Sign Up</h2>
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="signup-username" class="form-label">Username</label>
+              <input id="signup-username" type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="signup-password" class="form-label">Password</label>
+              <input id="signup-password" type="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full-width">Create Account</button>
+          </form>
+          <p class="mt-8">Already have an account? <a href="#login" id="to-login-link">Login here</a></p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ====== HOME PAGE ====== -->
+    <div id="home-page" class="page">
+      <header class="app-header flex justify-between items-center">
+        <div>
+          <h1>🎯 The Kartaal Challenge</h1>
+          <p class="app-subtitle">Build habits together, one day at a time</p>
+        </div>
+        <button id="logout-btn" class="btn btn--outline">Logout</button>
+      </header>
+
+      <!-- Create Challenge -->
+      <section class="create-section">
+        <div class="card">
+          <div class="card__body">
+            <h2>Create New Challenge</h2>
+            <form id="create-challenge-form" class="challenge-form">
+              <div class="form-group">
+                <label for="habit-name" class="form-label">Habit Name</label>
+                <input type="text" id="habit-name" class="form-control" placeholder="e.g., Daily Exercise" required>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full-width">Create Challenge</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Challenges List -->
+      <section class="challenges-section">
+        <h2>Live Challenges</h2>
+        <div id="challenges-container" class="challenges-grid"></div>
+        <div id="no-challenges" class="no-challenges hidden">
+          <p>No challenges yet. Create your first challenge above!</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ====== CHALLENGE DETAIL PAGE ====== -->
+    <div id="challenge-page" class="page">
+      <button id="back-to-home" class="btn btn--outline mb-8">← Back to Home</button>
+      <div id="challenge-detail" class="challenge-detail"></div>
+    </div>
+
+    <!-- ====== CALENDAR PAGE ====== -->
+    <div id="calendar-page" class="page">
+      <button id="back-to-challenge" class="btn btn--outline mb-8">← Back to Challenge</button>
+      <div id="calendar-content" class="calendar-content"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
